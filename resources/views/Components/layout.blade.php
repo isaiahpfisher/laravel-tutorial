@@ -35,6 +35,14 @@
                   <x-nav-link href="/login" active="{{ request()->is('login') }}">Login</x-nav-link>
                   <x-nav-link href="/register" active="{{ request()->is('register') }}">Register</x-nav-link>
                 @endguest
+
+                @auth
+                  <form action="/logout" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <x-form-button>Log out</x-form-button>
+                  </form>
+                @endauth
               </div>
             </div>
           </div>

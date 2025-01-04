@@ -36,7 +36,8 @@ class JobController extends Controller {
       'employer_id' => 1,
     ]);
 
-    Mail::to($job->employer->user)->send(new JobPosted($job)); // Laravel knows to get email from user instance (but you could explicitly pass the email)
+    // Laravel knows to get email from user instance (but you could explicitly pass the email)
+    Mail::to($job->employer->user)->queue(new JobPosted($job));
 
 
     return redirect("/jobs");

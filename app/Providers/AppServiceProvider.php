@@ -24,8 +24,8 @@ class AppServiceProvider extends ServiceProvider {
     Model::preventLazyLoading();
 
     // note that gates always fail for guests - see docs for more info
-    Gate::define('edit-job', function (User $user, Job $job) {
-      return $job->employer->user->is($user);
-    });
+    // Gate::define('edit-job', function (User $user, Job $job) {
+    //   return $job->employer->user->is($user);
+    // });
   }
 }

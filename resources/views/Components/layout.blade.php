@@ -8,7 +8,8 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Home Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/js/app.js'])
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
   </head>
 
   <body class="h-full">
